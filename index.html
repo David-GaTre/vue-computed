@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTADORES DE LETRAS</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://unpkg.com/vue@3"></script>
+</head>
+
+<body>
+<div id="app" class="justify-content-center text-center">
+  <h1>EJERCICIO DOM Y COMPUTADAS</h1>
+  <p ref="p">Referencia</p>
+  <p ref="p2">Esto cambio de color por una referencia</p>
+
+
+  <h3>Contar caracteres con metodos</h3>
+  <input v-model="method_word" placeholder="Escribe aqui">
+  <button @click="countCharsMethod()">Contar caracteres</button>
+
+  <div v-if="!pressed">
+    <p>Presione el boton de arriba para contar los caracteres de la palabra</p>
+  </div>
+  <div v-else>
+    <p>La cantidad de caracteres en la palabra es: {{ m_word_length }}</p>
+  </div>
+
+  <h3>Contar caracteres con computadas</h3>
+  <input v-model="selected_word" placeholder="Escribe aqui">
+  <p> La cantidad de caracteres que tiene la palabra de arriba es: {{countChars}}</p>
+  
+</div>
+<script src="./basic.js"></script>
+</body>
+</html>
